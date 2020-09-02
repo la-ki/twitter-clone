@@ -14,12 +14,14 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 //components
 import SidebarOption from '../SidebarOption/SidebarOption';
 
+import {Button} from '@material-ui/core';
+
 function Sidebar() {
     return (
         <div className="sidebar">
             <TwitterIcon />
 
-            <SidebarOption Icon={HomeIcon} text="Home" />
+            <SidebarOption active Icon={HomeIcon} text="Home" />
             <SidebarOption Icon={SearchIcon} text="Explore" />
             <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
             <SidebarOption Icon={MailOutlineIcon} text="Messages" />
@@ -27,6 +29,8 @@ function Sidebar() {
             <SidebarOption Icon={ListAltIcon} text="Lists" />
             <SidebarOption Icon={PermIdentifyIcon} text="Profile" />
             <SidebarOption Icon={MoreHorizIcon} text="More" />
+
+            <Button fullWidth variant="outlined" className="sidebar__tweet">Tweet</Button>
         </div>
     )
 }
